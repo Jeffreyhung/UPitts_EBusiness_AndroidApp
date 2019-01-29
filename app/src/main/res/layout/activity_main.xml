@@ -11,30 +11,13 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.constraint.ConstraintLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay"
-                tools:layout_editor_absoluteY="41dp" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="117dp"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:typeface="sans"
-                tools:layout_editor_absoluteX="147dp"
-                tools:layout_editor_absoluteY="28dp"
-                tools:text="NavBar" />
-
-        </android.support.constraint.ConstraintLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            tools:layout_editor_absoluteY="41dp" />
 
     </android.support.design.widget.AppBarLayout>
 
