@@ -6,261 +6,371 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="56dp"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/tv_search"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_search"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/et_search"
-        app:layout_constraintEnd_toEndOf="@+id/tv_pricerange"
-        app:layout_constraintTop_toTopOf="@+id/et_search"
-        tools:text="Search" />
-
-    <EditText
-        android:id="@+id/et_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/search_search"
-        app:layout_constraintStart_toStartOf="@+id/et_pricemin"
-        tools:layout_editor_absoluteY="28dp" />
-
-    <Button
-        android:id="@+id/bt_search"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/search_search"
-        tools:layout_editor_absoluteY="532dp"
-        tools:text="Search" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_pricerange"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_priceRange"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_location"
-        tools:layout_editor_absoluteY="87dp"
-        tools:text="Price Range" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-    <EditText
-        android:id="@+id/et_pricemax"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/search_priceMinimum"
-        android:inputType="textPersonName"
-        android:text="@string/search_max"
-        app:layout_constraintBottom_toBottomOf="@+id/et_pricemin"
-        app:layout_constraintTop_toTopOf="@+id/et_pricemin"
-        tools:layout_editor_absoluteX="316dp"
-        tools:text="Max" />
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_search"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="6dp"
+                tools:text="Search" />
 
-    <EditText
-        android:id="@+id/et_pricemin"
-        android:layout_width="94dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/search_priceMinimum"
-        android:inputType="textPersonName"
-        android:text="@string/search_min"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_pricerange"
-        app:layout_constraintStart_toStartOf="@+id/et_company"
-        app:layout_constraintTop_toTopOf="@+id/tv_pricerange"
-        tools:text="Min" />
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="@string/search_search"
+                tools:layout_editor_absoluteX="139dp"
+                tools:layout_editor_absoluteY="28dp" />
+        </TableRow>
 
-    <TextView
-        android:id="@+id/tv_location"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_location"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_category"
-        tools:layout_editor_absoluteY="151dp"
-        tools:text="Location" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-    <CheckBox
-        android:id="@+id/cb_location_torso"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_torso"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_location_waist"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_neck"
-        app:layout_constraintTop_toTopOf="@+id/cb_location_waist"
-        tools:text="Torso" />
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_company"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_company"
+                app:layout_constraintTop_toTopOf="@+id/et_company"
+                tools:layout_editor_absoluteX="71dp"
+                tools:text="Company" />
 
-    <CheckBox
-        android:id="@+id/cb_location_head"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_head"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_hands"
-        tools:layout_editor_absoluteY="213dp"
-        tools:text="Head" />
+            <EditText
+                android:id="@+id/et_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="@string/search_company"
+                tools:layout_editor_absoluteX="193dp"
+                tools:layout_editor_absoluteY="449dp" />
 
-    <CheckBox
-        android:id="@+id/cb_location_feet"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_feet"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_location_hands"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_arms"
-        app:layout_constraintTop_toTopOf="@+id/cb_location_hands"
-        tools:text="Feet" />
+        </TableRow>
 
-    <CheckBox
-        android:id="@+id/cb_location_chests"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_chests"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_location_arms"
-        app:layout_constraintTop_toTopOf="@+id/cb_location_arms"
-        tools:layout_editor_absoluteX="276dp"
-        tools:text="Chests" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-    <CheckBox
-        android:id="@+id/cb_location_neck"
-        android:layout_width="82dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_neck"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_location_head"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_feet"
-        app:layout_constraintTop_toTopOf="@+id/cb_location_head"
-        tools:text="Neck" />
+            <TextView
+                android:id="@+id/tv_pricerange"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/search_priceRange"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="47dp"
+                tools:layout_editor_absoluteY="87dp"
+                tools:text="Price Range" />
 
-    <CheckBox
-        android:id="@+id/cb_location_waist"
-        android:layout_width="72dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_waist"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_head"
-        tools:layout_editor_absoluteY="245dp"
-        tools:text="Waist" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
 
-    <CheckBox
-        android:id="@+id/cb_location_hands"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_hands"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_chests"
-        tools:layout_editor_absoluteY="181dp"
-        tools:text="Hands" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/cb_location_wrist"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_wrist"
-        app:layout_constraintStart_toStartOf="@+id/cb_location_torso"
-        tools:layout_editor_absoluteY="277dp"
-        tools:text="Wrist" />
+                    <EditText
+                        android:id="@+id/et_pricemin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/search_priceMinimum"
+                        android:inputType="numberSigned"
+                        android:maxWidth="80dp"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="@string/search_min"
+                        tools:layout_editor_absoluteX="175dp"
+                        tools:layout_editor_absoluteY="45dp"
+                        tools:text="Min" />
+                </TableRow>
 
-    <CheckBox
-        android:id="@+id/cb_location_arms"
-        android:layout_width="80dp"
-        android:layout_height="28dp"
-        android:text="@string/search_arms"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_location"
-        app:layout_constraintTop_toTopOf="@+id/tv_location"
-        tools:layout_editor_absoluteX="193dp"
-        tools:text="Arms" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_category"
-        android:layout_width="104dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_category"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_company"
-        tools:layout_editor_absoluteY="322dp"
-        tools:text="Categroy" />
+                    <EditText
+                        android:id="@+id/et_pricemax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/search_priceMinimum"
+                        android:inputType="none|numberSigned"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="@string/search_max"
+                        app:layout_constraintBottom_toBottomOf="@+id/et_pricemin"
+                        app:layout_constraintTop_toTopOf="@+id/et_pricemin"
+                        tools:layout_editor_absoluteX="316dp"
+                        tools:text="Max" />
+                </TableRow>
 
-    <CheckBox
-        android:id="@+id/cb_category_medical"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:text="M@string/search_mdical"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_category"
-        app:layout_constraintStart_toStartOf="@+id/cb_category_fitness"
-        app:layout_constraintTop_toTopOf="@+id/tv_category"
-        tools:text="Medical" />
+            </TableLayout>
 
-    <CheckBox
-        android:id="@+id/cb_category_fitness"
-        android:layout_width="103dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_fitness"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_category_industrial"
-        app:layout_constraintStart_toStartOf="@+id/cb_category_entertainment"
-        app:layout_constraintTop_toTopOf="@+id/cb_category_industrial"
-        tools:text="Fitness" />
+        </TableRow>
 
-    <CheckBox
-        android:id="@+id/cb_category_entertainment"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_entertainment"
-        app:layout_constraintStart_toStartOf="@+id/cb_category_petsandanimal"
-        tools:layout_editor_absoluteY="387dp"
-        tools:text="Entertainment" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-    <CheckBox
-        android:id="@+id/cb_category_petsandanimal"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_petsandanimal"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="419dp" />
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_category"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteY="322dp"
+                tools:text="Categroy" />
 
-    <CheckBox
-        android:id="@+id/cb_category_lifestyle"
-        android:layout_width="105dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_lifestyle"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_category_medical"
-        app:layout_constraintStart_toStartOf="@+id/cb_category_industrial"
-        app:layout_constraintTop_toTopOf="@+id/cb_category_medical"
-        tools:text="Lifestyle" />
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    <CheckBox
-        android:id="@+id/cb_category_industrial"
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_industrial"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="355dp"
-        tools:text="Industrial" />
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_company"
-        android:layout_width="107dp"
-        android:layout_height="wrap_content"
-        android:text="@string/search_company"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/et_company"
-        app:layout_constraintTop_toTopOf="@+id/et_company"
-        tools:layout_editor_absoluteX="71dp"
-        tools:text="Company" />
+                    <CheckBox
+                        android:id="@+id/cb_category_lifestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_lifestyle"
+                        tools:text="Lifestyle" />
 
-    <EditText
-        android:id="@+id/et_company"
-        android:layout_width="207dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/search_company"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="449dp" />
+                    <CheckBox
+                        android:id="@+id/cb_category_medical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_medical"
+                        tools:text="Medical" />
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="580dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_category_fitness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_fitness"
+                        tools:text="Fitness" />
+
+                    <CheckBox
+                        android:id="@+id/cb_category_industrial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_industrial"
+                        tools:layout_editor_absoluteX="276dp"
+                        tools:layout_editor_absoluteY="355dp"
+                        tools:text="Industrial" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_category_entertainment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_entertainment"
+                        tools:layout_editor_absoluteY="387dp"
+                        tools:text="Entertainment" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_category_petsandanimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_petsandanimal"
+                        tools:layout_editor_absoluteX="193dp"
+                        tools:layout_editor_absoluteY="419dp" />
+
+                </TableRow>
+            </TableLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_location"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteY="151dp"
+                tools:text="Location" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_location_waist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_waist"
+                        tools:layout_editor_absoluteY="245dp"
+                        tools:text="Waist" />
+
+                    <CheckBox
+                        android:id="@+id/cb_location_wrist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_wrist"
+                        tools:layout_editor_absoluteY="277dp"
+                        tools:text="Wrist" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_location_hands"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_hands"
+                        tools:layout_editor_absoluteY="181dp"
+                        tools:text="Hands" />
+
+                    <CheckBox
+                        android:id="@+id/cb_location_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_head"
+                        tools:layout_editor_absoluteY="213dp"
+                        tools:text="Head" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_location_neck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_neck"
+                        tools:text="Neck" />
+
+                    <CheckBox
+                        android:id="@+id/cb_location_chests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_chests"
+                        tools:layout_editor_absoluteX="276dp"
+                        tools:text="Chests" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_location_feet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_feet"
+                        tools:text="Feet" />
+
+                    <CheckBox
+                        android:id="@+id/cb_location_arms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_arms"
+                        tools:layout_editor_absoluteX="193dp"
+                        tools:text="Arms" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_location_torso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_torso"
+                        tools:text="Torso" />
+                </TableRow>
+
+            </TableLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bt_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_search"
+                tools:layout_editor_absoluteY="532dp"
+                tools:text="Search" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="580dp" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
