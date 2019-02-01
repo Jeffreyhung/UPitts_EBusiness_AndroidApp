@@ -1,4 +1,31 @@
 <resources>
-    <string name="app_name">Android_APP</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Search App</string>
+
+    <!--Search Page-->
+    <string name="search_search">Search</string>
+    <string name="search_priceRange">Price Range</string>
+    <string name="search_max">Max</string>
+    <string name="search_min">Min</string>
+    <string name="search_priceMinimum">Price Minimum</string>
+    <string name="search_priceMaximum">Price Maximum</string>
+    <string name="search_location">Location</string>
+    <string name="search_arms">Arms</string>
+    <string name="search_chests">Chests</string>
+    <string name="search_feet">Feet</string>
+    <string name="search_hands">Hands</string>
+    <string name="search_head">Head</string>
+    <string name="search_neck">Neck</string>
+    <string name="search_torso">Torso</string>
+    <string name="search_waist">Waist</string>
+    <string name="search_wrist">Wrist</string>
+    <string name="search_petsandanimal">Pets and Animal</string>
+    <string name="search_medical">Medical</string>
+    <string name="search_lifestyle">Lifestyle</string>
+    <string name="search_industrial">Industrial</string>
+    <string name="search_fitness">Fitness</string>
+    <string name="search_entertainment">Entertainment</string>
+    <string name="search_category">Category</string>
+    <string name="search_company">Company</string>
+
+    <!--End Search Page-->
 </resources>
