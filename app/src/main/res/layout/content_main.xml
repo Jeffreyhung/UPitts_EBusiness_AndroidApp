@@ -34,10 +34,12 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
+                android:hint="@string/search_searchHint"
+                android:autofillHints=""
                 android:inputType="textPersonName"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="@string/search_search"
+
                 tools:layout_editor_absoluteX="139dp"
                 tools:layout_editor_absoluteY="28dp" />
         </TableRow>
@@ -64,10 +66,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
+                android:hint="@string/search_companyHint"
+                android:autofillHints=""
                 android:inputType="textPersonName"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="@string/search_company"
                 tools:layout_editor_absoluteX="193dp"
                 tools:layout_editor_absoluteY="449dp" />
 
@@ -105,14 +108,13 @@
                         android:ems="10"
                         android:gravity="center"
                         android:hint="@string/search_priceMinimum"
+                        android:autofillHints=""
                         android:inputType="numberSigned"
                         android:maxWidth="80dp"
                         android:selectAllOnFocus="true"
                         android:singleLine="true"
-                        android:text="@string/search_min"
                         tools:layout_editor_absoluteX="175dp"
-                        tools:layout_editor_absoluteY="45dp"
-                        tools:text="Min" />
+                        tools:layout_editor_absoluteY="45dp" />
                 </TableRow>
 
                 <TableRow
@@ -125,15 +127,14 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:gravity="center"
-                        android:hint="@string/search_priceMinimum"
+                        android:hint="@string/search_priceMaximum"
+                        android:autofillHints=""
                         android:inputType="none|numberSigned"
                         android:selectAllOnFocus="true"
                         android:singleLine="true"
-                        android:text="@string/search_max"
                         app:layout_constraintBottom_toBottomOf="@+id/et_pricemin"
                         app:layout_constraintTop_toTopOf="@+id/et_pricemin"
-                        tools:layout_editor_absoluteX="316dp"
-                        tools:text="Max" />
+                        tools:layout_editor_absoluteX="316dp"/>
                 </TableRow>
 
             </TableLayout>

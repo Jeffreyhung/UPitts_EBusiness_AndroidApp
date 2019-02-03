@@ -16,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
     final String[] category_name = {"lifestyle", "medical", "fitness", "industrial", "entertainment", "petsandanimals"};
     final String[] location_name = {"waist", "wrist", "hands", "head", "neck", "chests", "feet", "arms", "torso"};
 
+    private boolean isEmpty(EditText etText) {
+        if (etText.getText().toString().trim().length() > 0)
+            return false;
+
+        return true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this, SearchResult.class);
                 Bundle bundle = new Bundle();
 
-                bundle.putString("search", search.getText().toString());
-                bundle.putInt("pricemin", Integer.parseInt(pricemin.getText().toString()));
-                bundle.putInt("pricemax", Integer.parseInt(pricemin.getText().toString()));
-                bundle.putString("company", company.getText().toString());
+                if (!isEmpty(search))
+                    bundle.putString("search", search.getText().toString());
+                if (!isEmpty(pricemin))
+                    bundle.putInt("pricemin", Integer.parseInt(pricemin.getText().toString()));
+                if (!isEmpty(pricemax))
+                    bundle.putInt("pricemax", Integer.parseInt(pricemax.getText().toString()));
+                if (!isEmpty(company))
+                    bundle.putString("company", company.getText().toString());
                 for(int i=0; i<location.length; i++){
                     if (location[i]) bundle.putBoolean(location_name[i], location[i]);
                 }
@@ -69,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     if (category[i]) bundle.putBoolean(category_name[i], category[i]);
                 }
                 intent.putExtras(bundle);
-                //startActivity(intent);
+                startActivity(intent);
               }
           });
     }

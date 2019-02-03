@@ -3,6 +3,7 @@
     <string name="action_settings">Setting</string>
     <!--Search Page-->
     <string name="search_search">Search</string>
+    <string name="search_searchHint">Keyword to Search</string>
     <string name="search_priceRange">Price Range</string>
     <string name="search_max">Max</string>
     <string name="search_min">Min</string>
@@ -26,6 +27,9 @@
     <string name="search_entertainment">Entertainment</string>
     <string name="search_category">Category</string>
     <string name="search_company">Company</string>
-
+    <string name="search_companyHint">Company Name</string>
     <!--End Search Page-->
+    <!-- Result Page -->
+
+    <!--End Result Page-->
 </resources>
