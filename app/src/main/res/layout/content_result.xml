@@ -7,12 +7,4 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="56dp"
-    tools:showIn="@layout/activity_main">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="141dp" />
-</android.support.constraint.ConstraintLayout>
+    tools:showIn="@layout/activity_main"/>
