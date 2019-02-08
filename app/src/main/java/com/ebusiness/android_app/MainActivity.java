@@ -13,13 +13,12 @@ public class MainActivity extends AppCompatActivity {
             location_wrist, location_head, location_neck, location_torso;
     CheckBox category_medical, category_lifestyle, category_industrial, category_fitness,
             category_entertainment, category_pet;
-    final String[] category_name = {"lifestyle", "medical", "fitness", "industrial", "entertainment", "petsandanimals"};
-    final String[] location_name = {"waist", "wrist", "hands", "head", "neck", "chests", "feet", "arms", "torso"};
+    final String[] category_name = {"lifestyle", "medical", "fitness", "industrial", "entertainment"};
+    final String[] location_name = {"waist", "wrist", "hands", "head", "neck", "feet", "arms", "torso"};
 
     private boolean isEmpty(EditText etText) {
         if (etText.getText().toString().trim().length() > 0)
             return false;
-
         return true;
     }
 
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         company = findViewById(R.id.et_company);
         //category
         category_entertainment = findViewById(R.id.cb_category_entertainment);
-        category_pet = findViewById(R.id.cb_category_petsandanimal);
         category_medical = findViewById(R.id.cb_category_medical);
         category_lifestyle = findViewById(R.id.cb_category_lifestyle);
         category_industrial = findViewById(R.id.cb_category_industrial);
@@ -46,20 +44,18 @@ public class MainActivity extends AppCompatActivity {
         location_neck = findViewById(R.id.cb_location_neck);
         location_torso = findViewById(R.id.cb_location_torso);
         location_arms = findViewById(R.id.cb_location_arms);
-        location_chests = findViewById(R.id.cb_location_chests);
         location_feet = findViewById(R.id.cb_location_feet);
         location_hands = findViewById(R.id.cb_location_hands);
 
-        Button submit = (Button)findViewById(R.id.bt_search);
+        Button submit = findViewById(R.id.bt_search);
         submit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
                 final boolean[] location = {location_waist.isChecked(), location_wrist.isChecked(),
                         location_hands.isChecked(), location_head.isChecked(), location_neck.isChecked(),
-                        location_chests.isChecked(), location_feet.isChecked(), location_arms.isChecked(),
-                        location_torso.isChecked()};
+                        location_feet.isChecked(), location_arms.isChecked(), location_torso.isChecked()};
                 final boolean[] category = {category_lifestyle.isChecked(), category_medical.isChecked(),
                         category_fitness.isChecked(), category_industrial.isChecked(),
-                        category_entertainment.isChecked(), category_pet.isChecked()};
+                        category_entertainment.isChecked()};
 
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, SearchResult.class);

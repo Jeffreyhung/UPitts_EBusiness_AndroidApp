@@ -10,6 +10,7 @@
     tools:showIn="@layout/activity_main">
 
     <TableLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -45,6 +46,7 @@
         </TableRow>
 
         <TableRow
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
@@ -77,6 +79,7 @@
         </TableRow>
 
         <TableRow
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
@@ -142,6 +145,7 @@
         </TableRow>
 
         <TableRow
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
@@ -211,26 +215,15 @@
                         android:text="@string/search_entertainment"
                         tools:layout_editor_absoluteY="387dp"
                         tools:text="Entertainment" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <CheckBox
-                        android:id="@+id/cb_category_petsandanimal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/search_petsandanimal"
-                        tools:layout_editor_absoluteX="193dp"
-                        tools:layout_editor_absoluteY="419dp" />
 
                 </TableRow>
+
             </TableLayout>
 
         </TableRow>
 
         <TableRow
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
@@ -302,12 +295,12 @@
                         tools:text="Neck" />
 
                     <CheckBox
-                        android:id="@+id/cb_location_chests"
+                        android:id="@+id/cb_location_torso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/search_chests"
-                        tools:layout_editor_absoluteX="276dp"
-                        tools:text="Chests" />
+                        android:text="@string/search_torso"
+                        tools:text="Torso" />
+
                 </TableRow>
 
                 <TableRow
@@ -330,23 +323,12 @@
                         tools:text="Arms" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <CheckBox
-                        android:id="@+id/cb_location_torso"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/search_torso"
-                        tools:text="Torso" />
-                </TableRow>
-
             </TableLayout>
 
         </TableRow>
 
         <TableRow
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
@@ -358,18 +340,6 @@
                 android:text="@string/search_search"
                 tools:layout_editor_absoluteY="532dp"
                 tools:text="Search" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/test"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="32dp"
-                tools:layout_editor_absoluteY="580dp" />
         </TableRow>
 
     </TableLayout>
