@@ -1,5 +1,6 @@
 package com.ebusiness.android_app;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -49,10 +50,13 @@ public class SearchResult extends AppCompatActivity {
         TableRow tr = new TableRow(this);
         TextView textView1 = new TextView(this);
         textView1.setText(tag);
+        textView1.setTextSize(20);
         textView1.setTypeface(Typeface.DEFAULT_BOLD);
         tr.addView(textView1);
         TextView textView2 = new TextView(this);
+        textView2.setWidth(800);
         textView2.setText(info);
+        textView2.setTextSize(20);
         tr.addView(textView2);
         tl.addView(tr);
     }
@@ -64,12 +68,14 @@ public class SearchResult extends AppCompatActivity {
         TableRow tr = new TableRow(this);
         TextView textView1 = new TextView(this);
         textView1.setText(tag);
+        textView1.setTextSize(20);
         textView1.setTypeface(Typeface.DEFAULT_BOLD);
         tr.addView(textView1);
         TextView textView2 = new TextView(this);
         textView2.setText(Html.fromHtml(link, Html.FROM_HTML_MODE_LEGACY));
         textView2.setMovementMethod(LinkMovementMethod.getInstance());
         tr.addView(textView2);
+        textView2.setTextSize(20);
         tl.addView(tr);
     }
 
@@ -77,11 +83,16 @@ public class SearchResult extends AppCompatActivity {
         LinearLayout linearlayout = findViewById(R.id.result_linearlayout);
         TableLayout tableLayout;
         CardView cardview;
-        TableLayout.LayoutParams params = new TableLayout.LayoutParams(
-                TableLayout.LayoutParams.WRAP_CONTENT,
+        TableLayout.LayoutParams table_params = new TableLayout.LayoutParams(
+                TableLayout.LayoutParams.MATCH_PARENT,
                 TableLayout.LayoutParams.WRAP_CONTENT
         );
-        params.setMargins(20, 15, 20, 15);
+        CardView.LayoutParams card_params = new CardView.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        card_params.setMargins(15, 15, 15, 15);
+        table_params.setMargins(20, 15, 20, 15);
         try {
             if (info.equals("[]")){
                 addError(linearlayout);
@@ -91,14 +102,19 @@ public class SearchResult extends AppCompatActivity {
                     JSONObject temp = data.getJSONObject(i);
                     cardview = new CardView(this);
                     tableLayout = new TableLayout(this);
-                    tableLayout.setLayoutParams(params);
-                    cardview.addView(tableLayout);
+                    tableLayout.setLayoutParams(table_params);
+                    cardview.setLayoutParams(card_params);
+                    cardview.setRadius(9);
+                    cardview.setCardBackgroundColor(Color.parseColor("#DEE4E3"));
+                    cardview.setMaxCardElevation(15);
+                    cardview.setCardElevation(9);
                     addRow("Product: ", temp.getString("name"), tableLayout);
                     addRow("Price: ", temp.getString("price"), tableLayout);
                     addRow("Location: ", temp.getString("location"), tableLayout);
                     addRow("Category: ", temp.getString("category"), tableLayout);
                     addRow("Company: ", temp.getString("company"), tableLayout);
                     addLink("Product Link: ", temp.getString("link"), tableLayout);
+                    cardview.addView(tableLayout);
                     linearlayout.addView(cardview);
                 }
             }
