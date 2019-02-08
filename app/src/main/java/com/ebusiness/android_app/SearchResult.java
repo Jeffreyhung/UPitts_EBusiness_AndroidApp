@@ -1,6 +1,5 @@
 package com.ebusiness.android_app;
 
-import android.app.ActionBar;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -10,7 +9,6 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.ViewGroup;
 import android.widget.*;
 
 import java.io.BufferedReader;
@@ -124,8 +122,8 @@ public class SearchResult extends AppCompatActivity {
 
     private String createLink(){
         boolean category_boo = false, location_boo = false;
-        String[] category_name = {"lifestyle", "medical", "fitness", "industrial", "entertainment", "petsandanimals"};
-        String[] location_name = {"waist", "wrist", "hands", "head", "neck", "chests", "feet", "arms", "torso"};
+        String[] category_name = {"lifestyle", "medical", "fitness", "industrial", "entertainment"};
+        String[] location_name = {"waist", "wrist", "hands", "head", "neck", "feet", "arms", "torso"};
         List<String> category = new ArrayList<String>();
         List<String> location = new ArrayList<String>();
         Bundle bundle = getIntent().getExtras();
