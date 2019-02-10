@@ -11,26 +11,25 @@
 	}
 	foreach($_GET as $key => $value)
 	{
-		//https://www.upitt-dbms.tk/AndroidApp/Api.php?PriceMax=100&PriceMin=0&Search=Garmin&Company=company&Category=fitness,entertainment&Location=hands,wrist
 	   switch ($key) {
 	   	case 'Search':
-	   		$tem = $value;
+	   		$tem = mysqli_real_escape_string($conn, $value);
 	   		$statement .= "( name LIKE '%". $tem . "%' ) && ";
 	   		break;
 	   	case 'Company':
-	   		$tem = $value;
+	   		$tem = mysqli_real_escape_string($conn, $value);
 	   		$statement .= "( company LIKE '%". $tem . "%' ) && ";
 	   		break;
 	   	case 'PriceMin':
-	   		$tem = $value;
+	   		$tem = mysqli_real_escape_string($conn, $value);
 	   		$statement .= "( price  > ". (int)$tem . " ) && ";
 	   		break;
 	   	case 'PriceMax':
-	   		$tem = $value;
+	   		$tem = mysqli_real_escape_string($conn, $value);
 	   		$statement .= "( price  < ". (int)$tem . " ) && ";
 	   		break;
 	   	case 'Location':
-	   		$tem = explode(",", $value);
+	   		$tem = explode(",",  mysqli_real_escape_string($conn, $value));
 	   		$statement .= " ( ";
 	   		for ($i = 0; $i < count($tem); $i++){
 	   			$statement .= "( location  = '". $tem[$i] . "' ) || ";
@@ -39,7 +38,7 @@
 	   		$statement .= " ) && ";
 	   		break;
 	   	case 'Category':
-	   		$tem = explode(",", $value);
+	   		$tem = explode(",",  mysqli_real_escape_string($conn, $value));
 	   		$statement .= " ( ";
 	   		for ($i = 0; $i < count($tem); $i++){
 	   			$statement .= "( category  = '". $tem[$i] . "' ) || ";

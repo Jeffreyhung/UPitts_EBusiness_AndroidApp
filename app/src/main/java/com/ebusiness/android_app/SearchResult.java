@@ -74,6 +74,7 @@ public class SearchResult extends AppCompatActivity {
         TextView textView2 = new TextView(this);
         textView2.setText(Html.fromHtml(link, Html.FROM_HTML_MODE_LEGACY));
         textView2.setMovementMethod(LinkMovementMethod.getInstance());
+        textView2.setLinkTextColor(Color.parseColor("#303E97"));
         tr.addView(textView2);
         textView2.setTextSize(20);
         tl.addView(tr);
