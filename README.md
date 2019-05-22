@@ -1,4 +1,4 @@
-# Android app development Group Project - INSFCI 2730 E-Business
+# Android app development Group Project INSFCI 2730 E-Business
 
 ## Group Member:
 Xinran Chen xic96@pitt.edu  
@@ -22,5 +22,6 @@ In the android app, we will call the api with user's input and display the resul
 
 
 ## Reference: 
-[1] Wearable Technology Database: https://data.world/crowdflower/wearable-technology-database
-[2] 000WebHost: https://www.000webhost.com/
+[1] Wearable Technology Database: https://data.world/crowdflower/wearable-technology-database  
+[2] 000WebHost: https://www.000webhost.com/  
+ 
